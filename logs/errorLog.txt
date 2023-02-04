@@ -1,0 +1,8 @@
+20230131	15:30:52	eb31bd99-9b73-4f73-8fe6-67b3d7a516b9	TypeError	fsPromises.readFil is not a function
+20230204	13:55:45	9897e48e-24bc-4019-aaa8-07c1a7e8dee5	undefined: undefined
+20230204	13:55:45	e02fb4ee-2e7f-4c5c-9a34-aea4f2160e26	TypeError: Cannot read properties of undefined (reading 'status')
+20230204	13:56:24	ae6094a3-ddb8-40ad-8014-41f709da8f29	undefined: undefined
+20230204	13:56:24	7736a811-6116-4374-86f7-fbb29937faef	TypeError: Cannot read properties of undefined (reading 'status')
+20230204	13:56:25	f77b1710-26d5-414e-95e1-c0eec190e356	undefined: undefined
+20230204	13:56:25	253ca455-d26c-44ec-8d34-9e06e815ed65	TypeError: Cannot read properties of undefined (reading 'status')
+20230204	13:59:01	a5262421-8d4a-4bf4-b303-fd7caa760590	Error: Not allowed by cors
