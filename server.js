@@ -1,7 +1,6 @@
 const express = require('express')
 const path = require('path')
 const cors = require('cors')
-const corsOptions = require('./config/corsOptions')
 const { logger } = require('./middleware/logEvents')
 const errorHandler = require('./middleware/errorHandler')
 const corsOptions = require('./config/corsOptions')
@@ -20,7 +19,9 @@ app.use(express.json())
 app.use(express.static(path.join(__dirname, '/public')))
 
 app.use('/', require('./routes/root'))
-app.use('/employess', require('./routes/apis/employee'))
+app.use('/employees', require('./routes/apis/employee'))
+app.use('/register', require('./routes/register'))
+app.use('/auth', require('./routes/auth'))
 
 app.all('*', (req, res) =>{
     res.status(404)
