@@ -4,6 +4,8 @@ const cors = require('cors')
 const { logger } = require('./middleware/logEvents')
 const errorHandler = require('./middleware/errorHandler')
 const corsOptions = require('./config/corsOptions')
+const verifyJWT = require('./middleware/verifyJWT')
+const cookieParser = require('cookie-parser')
 const app = express()
 const PORT = process.env.PORT || 3500
 
@@ -16,12 +18,15 @@ app.use(cors(corsOptions))
 // Built-in middleware
 app.use(express.urlencoded({ extended: false }))
 app.use(express.json())
+app.use(cookieParser())
 app.use(express.static(path.join(__dirname, '/public')))
 
 app.use('/', require('./routes/root'))
-app.use('/employees', require('./routes/apis/employee'))
 app.use('/register', require('./routes/register'))
 app.use('/auth', require('./routes/auth'))
+app.use('/refreshToken', require('./routes/refresh'))
+app.use(verifyJWT)
+app.use('/employees', require('./routes/apis/employee'))
 
 app.all('*', (req, res) =>{
     res.status(404)
@@ -37,3 +42,4 @@ app.all('*', (req, res) =>{
 app.use(errorHandler)
 
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`))
+ 
