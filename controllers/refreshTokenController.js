@@ -6,7 +6,7 @@ const usersDB = {
 const jwt = require('jsonwebtoken')
 require('dotenv').config()
 
-const handleRefreshToken = async (req, res) => {
+const handleRefreshToken = (req, res) => {
     const cookies = req.cookie
     if (!cookies?.jwt) return res.sendStatus(401)
     console.log(cookies)
@@ -25,9 +25,9 @@ const handleRefreshToken = async (req, res) => {
                 process.env.ACCESS_TOKEN_SECRET_KEY,
                 { expiresIn: '30s' }
             )
+            res.json({ "access-token": accessToken })
         }
-    )
-
+    ) 
 }
 
 module.exports = { handleRefreshToken }

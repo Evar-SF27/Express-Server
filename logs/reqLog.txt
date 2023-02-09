@@ -91,3 +91,10 @@
 20230205	21:41:28	f8a5e7a8-ac4d-4245-8d5d-d3370b0c512c	POST	undefined	/register
 20230205	21:41:37	9df21352-cf78-4f19-8d0a-e2cadbf07615	POST	undefined	/register
 20230205	21:54:10	a5127bcd-73d3-4395-a229-8f6c6a499c2e	POST	undefined	/auth
+20230209	21:07:57	084a4b1a-5a77-4c9d-a0d9-4039342d9975	GET	undefined	/employees
+20230209	21:13:44	d4a1e884-c116-4ec0-8181-00197a760043	GET	undefined	/employees
+20230209	21:13:57	eed3d301-deee-4823-a7b4-6f1706fb8811	POST	undefined	/employees
+20230209	21:14:15	3bb47f80-e67d-4311-b41c-b8f743579c83	POST	undefined	/register
+20230209	21:14:23	74925974-314f-4512-951d-5fe9684bbb67	POST	undefined	/register
+20230209	21:16:10	5bfe0573-a9df-4d0f-b30e-08d89105d1e8	POST	undefined	/employees
+20230209	21:16:25	79a407cf-7964-4077-b37c-45462dc86e0e	POST	undefined	/employees

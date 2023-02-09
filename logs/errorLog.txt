@@ -6,3 +6,6 @@
 20230204	13:56:25	f77b1710-26d5-414e-95e1-c0eec190e356	undefined: undefined
 20230204	13:56:25	253ca455-d26c-44ec-8d34-9e06e815ed65	TypeError: Cannot read properties of undefined (reading 'status')
 20230204	13:59:01	a5262421-8d4a-4bf4-b303-fd7caa760590	Error: Not allowed by cors
+20230209	21:07:57	f8e7bedc-7391-4d1c-af9f-17fc1dbce38d	TypeError: Cannot read properties of undefined (reading '1')
+20230209	21:13:57	00d03b94-8f5b-44d8-a24a-5017c56fc5cb	TypeError: Cannot read properties of undefined (reading '1')
+20230209	21:16:10	c6e9bba6-9913-49c1-a025-027e65ef381e	TypeError: Cannot read properties of undefined (reading '1')
