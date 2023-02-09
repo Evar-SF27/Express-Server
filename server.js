@@ -6,11 +6,13 @@ const errorHandler = require('./middleware/errorHandler')
 const corsOptions = require('./config/corsOptions')
 const verifyJWT = require('./middleware/verifyJWT')
 const cookieParser = require('cookie-parser')
+const credentials = require('./middleware/credentials')
 const app = express()
 const PORT = process.env.PORT || 3500
 
 // Custom middleware logger
 app.use(logger)
+app.use(credentials)
 
 // CORS - Cross Origin Resource Sharing 
 app.use(cors(corsOptions))
