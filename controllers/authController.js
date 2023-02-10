@@ -18,8 +18,14 @@ const handleLogin = async (req, res) => {
     const matchPassword = bcrypt.compare(password, userInstance.password)
     if (matchPassword) {
         // JSON WEB TOKEN
+        const roles = Object.values(userInstance.roles)
         const accessToken = jwt.sign(
-            { "username": userInstance.username },
+            { 
+                "UserInfo": {
+                    "username": userInstance.username,
+                    "roles":  roles
+                }
+            },
             process.env.ACCESS_TOKEN_SECRET_KEY,
             { expiresIn: '30s' }
         )
