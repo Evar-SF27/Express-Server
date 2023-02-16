@@ -12,7 +12,6 @@ const createNewEmployee = async (req, res) => {
 
     try {
         const result = await Employee.create({
-            id: data.employees[data.employees.length - 1].id + 1 || 1,
             firstname: req.body.firstname,
             lastname: req.body.lastname
         })
@@ -24,7 +23,7 @@ const createNewEmployee = async (req, res) => {
 }
 
 const updateEmployee =  async (req, res) => {
-    if (req?.body?.id) {
+    if (!req?.body?.id) {
         return res.status(400).json({ 'message': 'ID Parameter is required' })
     }
 

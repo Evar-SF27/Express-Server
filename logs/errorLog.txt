@@ -10,3 +10,5 @@
 20230209	21:13:57	00d03b94-8f5b-44d8-a24a-5017c56fc5cb	TypeError: Cannot read properties of undefined (reading '1')
 20230209	21:16:10	c6e9bba6-9913-49c1-a025-027e65ef381e	TypeError: Cannot read properties of undefined (reading '1')
 20230216	14:00:55	aad9faf8-8336-49b7-8e90-6f95ae07f9d5	TypeError: authHeader?.startswith is not a function
+20230216	15:34:27	83a735a3-8015-4245-a769-89d01a2f4d3e	TypeError: authHeader?.startswith is not a function
+20230216	15:37:03	a5585f67-5ac9-4906-b0d2-95be2595da24	TypeError: Cannot read properties of undefined (reading '1')
