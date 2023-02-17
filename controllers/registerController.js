@@ -3,12 +3,13 @@ const bcrypt = require('bcrypt')
 
 const handleNewUser = async (req, res) => {
     const { username, password } = req.body
+    console.log(username, password)
     
     // Checking if the username and password are passed in the request
     if (!username || !password) return res.status(400).json({ 'message': 'Username and Password are required'})
     // Checking if a user with the username already exists
     const duplicate = await User.findOne({ username: username }).exec()
-    if (duplicate) return res.status(409)
+    if (duplicate) return res.sendStatus(409)
     //Create and store a new user
     try {
         // Encrypting the password
