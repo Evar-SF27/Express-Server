@@ -9,10 +9,10 @@ const handleLogin = async (req, res) => {
     const userInstance = await User.findOne({ username: username }).exec()
     if (!userInstance) return res.sendStatus(401)
 
-    const matchPassword = bcrypt.compare(password, userInstance.password)
+    const matchPassword = await bcrypt.compare(password, userInstance.password)
     if (matchPassword) {
         // JSON WEB TOKEN
-        const roles = Object.values(userInstance.roles)
+        const roles = Object.values(userInstance.roles).filter(Boolean)
 
         const accessToken = jwt.sign(
             { 
