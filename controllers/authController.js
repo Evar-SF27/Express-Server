@@ -33,7 +33,7 @@ const handleLogin = async (req, res) => {
         userInstance.refreshToken = refreshToken
         const result = await userInstance.save()
 
-        res.cookie('jwt', refreshToken, { httpOnly: true, sameSite: 'None', maxAge: 24 * 60 * 60 * 1000 }) // secure: true
+        res.cookie('jwt', refreshToken, { httpOnly: true, sameSite: 'None', secure: true, maxAge: 24 * 60 * 60 * 1000 })
         res.json({ roles, accessToken })
     } else {
         res.sendStatus(401)
